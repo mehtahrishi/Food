@@ -1,0 +1,106 @@
+/* Reset defaults */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: url('food.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Chatbox container */
+#chatbox {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Message container */
+#messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Message styling */
+.message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.message p {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    max-width: 70%;
+}
+
+/* User message alignment */
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.user p {
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+}
+
+/* Bot message alignment */
+.message.bot {
+    justify-content: flex-start;
+}
+
+/* Icons */
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Input container */
+.input-container {
+    display: flex;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.input-container input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.input-container button {
+    margin-left: 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background: #0056b3;
+}
